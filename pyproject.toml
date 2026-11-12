@@ -1,0 +1,15 @@
+[project]
+name = "tool-agent"
+version = "0.2.0"
+description = "A small tool-using LLM agent (Gemini or Claude) with tested, deterministic behavior"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+gemini = ["google-genai>=1.0"]
+anthropic = ["anthropic>=0.40"]
+dev = ["pytest>=8"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
